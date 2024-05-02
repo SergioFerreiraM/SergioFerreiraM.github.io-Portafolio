@@ -1,0 +1,599 @@
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    font-family:monospace;
+}
+body {
+    background: url('img/Fondo.avif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
+header {
+    background-color: rgb(2, 36, 33);
+    color: blanchedalmond;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.menu-btn {
+    margin-left: 20px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    justify-content: space-between;
+    height: 20px;
+    transform: translate(-50%, -50%);
+  }
+  
+  .menu-btn div {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(31, 112, 150, 0.808);
+    margin-top: 6px;
+    transform-origin: 0px 100%;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  
+  .activelinea1__btn-menu {
+    transform: rotate(45deg) 
+    translate(-10px, 2px);
+  }
+  
+  .activelinea2__btn-menu {
+    opacity: 0;
+    margin-left: -30px;
+  
+  }
+  
+  .activelinea3__btn-menu {
+    transform: rotate(-45deg) 
+    translate(-10px, -2px);
+  }
+
+  .contenedorBarra {
+    flex-direction: column;
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+
+  }
+  
+  
+
+  .menu.active {
+    display: block;
+  }
+  
+  .menu .menu-options {
+    list-style: none;
+    padding: 0;
+    width: 150px;
+    height: 100%;
+    background-color: #333;
+    position: fixed;
+    top: 150px;
+    right: 0;
+    color: #fff;
+    font-size: 18px;
+    z-index: 300;
+  }
+  
+  .menu .menu-options li {
+    padding: 10px 0;
+  }
+  
+  .menu .menu-options li a {
+    color: skyblue;
+    text-decoration: none;
+  }
+  .menu-name {
+    margin: 50px 0 0 0;
+    flex-direction: column;    
+    background-color: #333;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    color: #fff;
+    z-index: 300;
+}
+
+    
+@media only screen and (min-width: 600px) {
+  .header h1 {
+      margin-right: 100px;
+  }
+  .menu-btn {
+      display: none;
+  }
+
+  .menu {
+  margin-top: 20px;
+  display: block; 
+  position: static;
+  display: flex;
+  align-items: center;
+  margin-right: 400px;
+}
+
+
+.menu .menu-options {
+  align-items: start;
+  position: static; 
+  display: flex; 
+  background-color: transparent; 
+  z-index: auto; 
+}
+
+.menu .menu-options li {
+  padding: 0 20px; 
+}
+  .menu.menu-options {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      position: fixed;
+      top: 50px; 
+      justify-content: space-between;
+      align-items: center;
+  }
+  .menu-name {
+      display: none;
+  }
+  
+  .menu .menu-options p {
+      text-align: center;
+      font-family: monospace;
+      font-size: 18px;
+  }
+  .menu .menu-options a.fa-home {
+      margin-left: 40px;
+      align-items: center;
+  }
+
+  .menu .menu-options a.fa-tasks {
+      margin-left: 30px;
+      align-items: center;
+  }
+
+  .menu .menu-options a.fa-mail-bulk {
+      margin-left: 20px;
+      align-items: center;
+  }
+
+  .menu .menu-options a.fa-address-card {
+      margin-left: 30px;
+      align-items: center;
+  }
+
+  .menu .menu-options a.fa-phone-alt {
+      margin-left: 25px;
+      align-items: center;
+  }
+
+  .menu .menu-options li {
+      padding: 0 10px;
+      display: inline-block;
+  }
+  
+  .menu .menu-options li a {
+      color: skyblue;
+      text-decoration: none;
+  }
+
+  .menu .menu-options i {
+      display: flex;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+
+  .menu-btn {  
+
+  position: fixed;
+  right: 90%;
+  margin-bottom: 20px;
+  z-index: 1000;
+  }
+  .menu {
+      flex-direction: column;
+      top: 60px;
+      width: 30%;
+      height: 30%;
+      background-color: rgba(0, 0, 0, 0.8); 
+      z-index: 1000; 
+  }
+
+  .menu .menu-name {
+      display: flex;
+      align-items: center;
+      height: 20%;
+      width: 20%;
+      background-color: rgba(0, 0, 0, 0.8);
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5) ;
+  }
+
+  .menu-name .image {
+      align-items: center;
+      display: flex;
+  }
+
+  .menu .menu-name h4 {
+      font-size: 20px;
+
+      padding-bottom: 30px;
+  }
+
+  
+  
+
+  .menu .menu-options {
+      box-sizing: 60px;
+      width: 20%;
+      background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .menu .menu-options p {
+      display: none;
+  }
+
+  .menu .menu-options a.fa-home {
+      margin-left: 30px;
+  }
+
+  .menu .menu-options a.fa-tasks {
+      margin-left: 30px;
+  }
+
+  .menu .menu-options a.fa-mail-bulk {
+      margin-left: 30px;
+  }
+
+  .menu .menu-options a.fa-address-card {
+      margin-left: 30px;
+  }
+
+  .menu .menu-options a.fa-phone-alt {
+      margin-left: 30px;
+  }
+}
+
+.contenidoIntroduccion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.image {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.introduccion {
+  border: 2px solid #405ba5;
+  background-color: #344572bc;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.introduccion h1 {
+  color: rgb(134, 211, 185);
+  text-align: center;
+  text-decoration:aliceblue underline;
+  text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
+}
+
+.introduccion h2 {
+  color: rgb(20, 77, 58);
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
+}
+
+.introduccion h3 {
+  color: aquamarine;
+  text-align: center;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos de Social */
+
+.social {
+  border: 2px solid #405ba5;
+  background-color: #344572bc;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.social h1 {
+  color: rgb(134, 211, 185);
+  text-align: center;
+  text-decoration:aliceblue underline;
+  text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
+}
+
+.social h2 {
+  color: rgb(20, 77, 58);
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
+}
+
+.social h3 {
+  color: aquamarine;
+  text-align: center;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
+  justify-content: center;
+  align-items: center;
+}
+
+.social .redes {
+  text-align: center;
+}
+
+.social .redes h3 {
+  color: aquamarine;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
+}
+
+.social .redes a {
+  display: inline;
+  height: 200px;
+  width: 100px;
+  text-align: center;
+}
+
+.social .redes a .fa-github {
+  font-size: 30px;
+  color: rgb(25, 83, 171);
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
+}
+
+.social .redes a .fa-linkedin {
+  font-size: 30px;
+  color: rgb(25, 83, 171);
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
+}
+
+.social .redes a .fa-envelope {
+  font-size: 30px;
+  color: rgb(25, 83, 171);
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
+}
+
+.social .redes a .fa-file-pdf { 
+  font-size: 30px;
+  color: rgb(25, 83, 171);
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
+}
+
+/* Estilos de proyectos */
+
+.proyectos {
+  border: 2px solid #405ba5;
+  background-color: #344572bc;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 100px;
+  text-align: center;
+}
+.proyectos h1 {
+  color: rgb(134, 211, 185);
+  text-align: center;
+  text-decoration:aliceblue underline;
+  text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
+}
+
+.proyectos h3 {
+  color: rgb(20, 77, 58);
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
+}
+
+.proyectos p {
+  color: aquamarine;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
+}
+
+.proyectos .enlace {
+  display: inline-block;
+  padding: 10px;
+  background-color: #23377793;
+  border: 1px solid #809a25;
+  margin: 5px;
+  position: relative;
+  text-decoration: none;
+  color: #333;
+}
+
+.proyectos .enlace:hover {
+  background-color: #ccc;
+}
+
+.proyectos .vista-previa {
+  display: none; 
+  position: absolute;
+  top: -150px; /* Posiciona la vista previa arriba del enlace */
+  left: 50%; /* Centra la vista previa */
+  transform: translateX(-50%); /* Centra horizontalmente */
+  width: 200px; /* Ancho de la vista previa */
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 10px;
+}
+
+/*.proyectos .enlace:hover + .vista-previa {
+  display: block; /* Mostrar la vista previa al pasar el cursor por encima del enlace 
+}*/
+
+.proyectos .contenido {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.proyectos .proyetoSSM {
+  margin-top: 50px;
+}
+.proyectos .enlaceSolar img {
+  width: 300px;
+  background-color: antiquewhite;
+}
+
+.proyectos .enlaceSSM img {
+  width: 300px;
+  height: 150px;
+  background-color: aquamarine;
+}
+
+.habilidades {
+  border: 2px solid #405ba5;
+  background-color: #344572bc;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.habilidades h1 {
+  color: rgb(134, 211, 185);
+  text-align: center;
+  text-decoration:aliceblue underline;
+  text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
+}
+
+.habilidades .habilidad1 {
+  display: flex;
+  border: 2px solid #0d1733;
+  background-color: #040f2ebc;
+  padding: 20px;
+  border-radius: 10px;
+  color: rgb(20, 77, 58);
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
+}
+
+.habilidades .habilidad1 h3 {
+  color: rgb(20, 77, 58);
+  font-size: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.habilidades .habilidad1 img {
+  width: 300px;
+  height: 150px;
+}
+
+.habilidades .habilidad2 {
+  display: flex;
+  border: 2px solid #0d1733;
+  background-color: #040f2ebc;
+  padding: 20px;
+  border-radius: 10px;
+  color: rgb(20, 77, 58);
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
+}
+
+.habilidades .habilidad2 h3 {
+  color: rgb(20, 77, 58);
+  font-size: 100px;
+  margin-left: 100px;
+  margin-right: 150px;
+}
+
+.habilidades .habilidad2 img {
+  width: 300px;
+  height: 150px;
+}
+
+.habilidades .habilidad3 {
+  display: flex;
+  border: 2px solid #0d1733;
+  background-color: #040f2ebc;
+  padding: 20px;
+  border-radius: 10px;
+  color: rgb(20, 77, 58);
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
+}
+
+.habilidades .habilidad3 h3 {
+  margin-right: 50px;
+  margin-left: 30px;
+  color: rgb(20, 77, 58);
+  font-size: 95px;
+}
+
+.habilidades .habilidad3 img {
+  margin-right: 150px;
+  margin-top: 50px;
+  width: 300px;
+  height: 150px;
+}
+
+.habilidades .habilidad4 {
+  display: flex;
+  border: 2px solid #0d1733;
+  background-color: #040f2ebc;
+  padding: 20px;
+  border-radius: 10px;
+  color: rgb(20, 77, 58);
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
+}
+
+.habilidades .habilidad4 h3 {
+  color: rgb(20, 77, 58);
+  font-size: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.habilidades .habilidad4 img {
+  width: 300px;
+  height: 150px;
+}

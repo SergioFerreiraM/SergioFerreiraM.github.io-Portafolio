@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d3c8ba32df.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+<div id="app"></div>
+<body>
+    <header>
+        
+        <div class="contenedorBarra">
+            <div class="menu-btn">
+                <div class="btn-line1"></div>
+                <div class="btn-line2"></div>
+                <div class="btn-line3"></div>
+            </div>
+            <nav class="menu">
+                <div class="menu-name">
+                    <image href="img/logo.png" width="80" height="80"/>
+                  <h4>SFM</h4>
+                </div>
+                <div class="menu-options">
+                  <li><a onclick="href='h1'">
+                    <i class="fas fa-home" title="Introduccion"></i><p>Introduccion</p></a></li>
+                  <li><a onclick="href='Social'">
+                    <i class="fas fa-mail-bulk" title="Social"></i><p>Social</p></a></li>
+                  <li><a onclick="href='proyectos.html'">
+                    <i class="fas fa-tasks" title="Proyectos"></i><p>Proyectos</p></a></li>
+                  <li><a onclick="href='Habilidades'">
+                    <i class="fas fa-address-card" title="Habilidades"></i><p>Habilidades</p> 
+                    
+                </div>
+                
+            </nav>
+            </div>
+            <h1>Sergio Ferreira Mateus</h1> 
+    </header>
+<section class="contenidoIntroduccion">
+  <div class="image-container">
+    <img class="image" src="img/Foto.jpg" alt="Sergio">
+  </div>
+  <div class="introduccion">
+    <h1>/>Introduccion</h1>
+    <h2>{Soy Sergio Ferreira Mateus}</h2>
+    <h3>Soy Desarrollador web con hambre de crecer en esto y también soy dueño de una empresa de energía Solar</h3>
+    <a href=""></a>
+  </div>
+
+  <div class="social">
+    <h1>/>Social</h1>
+    <h2>{Redes Sociales}</h2>
+    <div class="redes">
+      <h3>Aquí me puedes encontrar</h3>
+      <a href="https://github.com/SergioFerreiraM" target="_blank"><i class="fab fa-github">Github /  </i></a>
+      <a href="https://www.linkedin.com/in/sergio-ferreira-mateus" target="_blank"><i class="fab fa-linkedin">linkedin /  </i></a>
+      <a href="mailto:sergioferreiramateus@gmail.com" target="_blank"><i class="fa-solid fa-envelope">Gmail /  </i></a>
+        <a href="Sergio Ferreira Mateus CV..pdf" target="_blank"><i class="fas fa-file-pdf">Mi CV</i></a>
+    </div>
+  </div>
+  <div class="proyectos">
+    <h1>/>Proyectos</h1>
+    <div class="proyectoSolar">
+      <h3>{Proyecto de página web para Full Solar Energy}</h3>
+      <p>Este proyecto fue realizado por un equipo de 4 desarroladores para mi empresa de energía solar, el cual fue nuestro proyecto de 
+        grado para la certificación como desarrolladores junior full-stack Java. Las tecnologias que utilizamos para este proyecto fueron:
+         HTML, CSS, JavaScript y Bootstrap para el front-end y JAVA, Spring Boot, MySQL y Postman para el back-end.</p>
+         <div class="enlaceSolar">
+          <a href="https://laduenasb.github.io/Proyecto-Solar-Code/" class="enlace" onclick="mostrarVistaPrevia('contenido-enlace1')"> 
+          <img src="img/FullSolarEnergyvp.png" alt=""></a>
+         </div>
+         <div class="vista-previa" id="vista-previa">
+          <div id="contenido-enlace1" class="contenido">
+            <img src="img/VistaPrevia-Solar.jpeg" alt="previaSolar">
+          </div>
+         </div>
+    </div>
+
+    <div class="proyetoSSM">
+      <h3>{Proyecto de página web para Shine Shadow Music}</h3>
+      <p>El desarrollo de este proyecto es personal, siendo yo el único desarrollador web para este. He utilizado como tecnologias: HTML, CSS, JavaScript y Bootstrap para el front-end y el back-end esta en desarrollo.</p>
+      <div class="enlaceSSM">
+        <a href="https://sergioferreiram.github.io/ShineSadowMusic/" class="enlace" onclick="mostrarVistaPrevia('contenido-enlace2')">
+        <img src="img/SSMvp.png" alt=""></a>
+      </div>
+      <div class="vista-previa" id="vista-previa">
+        <div id="contenido-enlace2" class="contenido">
+          <img src="img/SSMvp.png" alt="previaSSM">
+    </div>
+  </div>
+
+  <div class="habilidades">
+    <h1>/>Habilidades</h1>
+    <div class="habilidad1">
+      <h3>HTML</h3>
+      <img src="img/htmlLogo.jpeg" alt="logoHtml">
+    </div>
+    <div class="habilidad2">
+      <h3>CSS</h3>
+      <img src="img/cssLogo.png" alt="logoCss">
+    </div>
+    <div class="habilidad3">
+      <h3>Java Script</h3>
+      <img src="img/jsLogo.jpg" alt="logoJs">
+    </div>
+    <div class="habilidad4">
+      <h3>JAVA</h3>
+      <img src="img/javaLogo.png" alt="logoJava">
+  </div>
+</section>
+<footer>
+  <div class="footer">Footer content</div>
+</footer>
+    <script src="scrip.js"></script>
+</body>
+</html>
