@@ -9,8 +9,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
 </head>
-<div id="app"></div>
 <body>
+  <div class="backgroundContenedor">
+    <img src="img/Fondo.avif" alt="Fondo">
+  </div>
     <header>
         
         <div class="contenedorBarra">
@@ -40,7 +42,8 @@
             </div>
             <h1>Sergio Ferreira Mateus</h1> 
     </header>
-<section class="contenidoIntroduccion">
+<section class="contenidoContenedor">
+  <div class="contenedorIntroduccion">
   <div class="image-container">
     <img class="image" src="img/Foto.jpg" alt="Sergio">
   </div>
@@ -49,6 +52,17 @@
     <h2>{Soy Sergio Ferreira Mateus}</h2>
     <h3>Soy Desarrollador web con hambre de crecer en esto y también soy dueño de una empresa de energía Solar</h3>
     <a href=""></a>
+  </div>
+  </div>
+
+  <div id="game-container">
+    <canvas id="gameSnake" width="400" height="400"></canvas>
+    <div id="mobile-controls">
+      <button id="upButton">&#8593;</button>
+      <button id="leftButton">&#8592;</button>
+      <button id="downButton">&#8595;</button>
+      <button id="rightButton">&#8594;</button>
+    </div>
   </div>
 
   <div class="social">
@@ -65,7 +79,10 @@
   <div class="proyectos">
     <h1>/>Proyectos</h1>
     <div class="proyectoSolar">
-      <h3>{Proyecto de página web para Full Solar Energy}</h3>
+      <div class="pSolarH3">
+        <h2>{Proyecto de página web para Full Solar Energy}</h2>
+      </div>
+      <div class="pSolarDiv">
       <p>Este proyecto fue realizado por un equipo de 4 desarroladores para mi empresa de energía solar, el cual fue nuestro proyecto de 
         grado para la certificación como desarrolladores junior full-stack Java. Las tecnologias que utilizamos para este proyecto fueron:
          HTML, CSS, JavaScript y Bootstrap para el front-end y JAVA, Spring Boot, MySQL y Postman para el back-end.</p>
@@ -78,10 +95,14 @@
             <img src="img/VistaPrevia-Solar.jpeg" alt="previaSolar">
           </div>
          </div>
+        </div>
     </div>
 
     <div class="proyetoSSM">
-      <h3>{Proyecto de página web para Shine Shadow Music}</h3>
+      <div class="pSSMH3">
+        <h2>{Proyecto de página web para Shine Shadow Music}</h2>
+      </div>
+      <div class="pSSMDiv">
       <p>El desarrollo de este proyecto es personal, siendo yo el único desarrollador web para este. He utilizado como tecnologias: HTML, CSS, JavaScript y Bootstrap para el front-end y el back-end esta en desarrollo.</p>
       <div class="enlaceSSM">
         <a href="https://sergioferreiram.github.io/ShineSadowMusic/" class="enlace" onclick="mostrarVistaPrevia('contenido-enlace2')">
@@ -90,6 +111,7 @@
       <div class="vista-previa" id="vista-previa">
         <div id="contenido-enlace2" class="contenido">
           <img src="img/SSMvp.png" alt="previaSSM">
+    </div>
     </div>
   </div>
 
@@ -113,7 +135,7 @@
   </div>
 </section>
 <footer>
-  <div class="footer">Footer content</div>
+  <div class="footer">&copy; Desarrollador Sergio Ferreira M.</div>
 </footer>
     <script src="scrip.js"></script>
 </body>

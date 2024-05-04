@@ -3,9 +3,22 @@ body, h1, h2, h3, p, ul, li {
     padding: 0;
     font-family:monospace;
 }
-body {
-    background: url('img/Fondo.avif') no-repeat center center fixed;
-    background-size: cover;
+
+.backgroundContenedor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Asegúrate de que la imagen de fondo esté detrás del contenido */
+}
+
+.backgroundContenedor img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(30%); /* Ajusta el valor para controlar el oscurecimiento */
 }
 
 body::before {
@@ -122,6 +135,11 @@ header h1 {
 
     
 @media only screen and (min-width: 600px) {
+
+  header {
+    display: flex;
+    margin-left: 250px;
+  }
   .header h1 {
       margin-right: 100px;
   }
@@ -280,6 +298,16 @@ header h1 {
   }
 }
 
+
+.contenedorIntroduccion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px; 
+    height: 100%; 
+    background-color: rgba(71, 74, 243, 0.356);
+}
+
 .contenidoIntroduccion {
   display: flex;
   justify-content: center;
@@ -290,6 +318,7 @@ header h1 {
 }
 
 .image-container {
+  padding: 20px;
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
@@ -307,8 +336,10 @@ header h1 {
   padding: 20px;
   border-radius: 10px;
   text-align: center;
+  height: 100%;
 }
 .introduccion h1 {
+  font-size: 27px;
   color: rgb(134, 211, 185);
   text-align: center;
   text-decoration:aliceblue underline;
@@ -316,9 +347,10 @@ header h1 {
 }
 
 .introduccion h2 {
-  color: rgb(20, 77, 58);
+  color: rgb(13, 51, 46);
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+  font-size: 24px;
 }
 
 .introduccion h3 {
@@ -329,6 +361,41 @@ header h1 {
   justify-content: center;
   align-items: center;
 }
+
+#game-container {
+  margin-left: 400px;
+  position: relative;
+}
+
+#gameSnake {
+  background-color: #0d1836a8;
+
+  border: 10px solid #000;
+}
+
+@media only screen and (max-width: 600px) {
+  #mobile-controls {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  #mobile-controls button {
+    font-size: 24px;
+    padding: 10px 20px;
+    margin: 0 10px;
+  }
+  
+}
+
+@media only screen and (min-width: 600px) {
+  #mobile-controls {
+    display: none;
+  }
+}
+
+
 
 /* Estilos de Social */
 
@@ -349,9 +416,9 @@ header h1 {
 }
 
 .social h2 {
-  color: rgb(20, 77, 58);
+  color: rgb(13, 51, 46);
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
 }
 
 .social h3 {
@@ -425,10 +492,10 @@ header h1 {
   text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
 }
 
-.proyectos h3 {
-  color: rgb(20, 77, 58);
+.proyectos h2 {
+  color: rgb(13, 51, 46);
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
 }
 
 .proyectos p {
@@ -488,6 +555,38 @@ header h1 {
   background-color: aquamarine;
 }
 
+@media only screen and (min-width: 600px) {
+  .proyectos .proyectoSolar .pSolarH3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .proyectos .pSolarDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+
+  .proyectos .proyectoSSM .pSSMH3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+
+  .proyectos .pSSMDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+
+}
+
+/* Estilos de habilidades */
+
 .habilidades {
   border: 2px solid #405ba5;
   background-color: #344572bc;
@@ -505,11 +604,14 @@ header h1 {
 }
 
 .habilidades .habilidad1 {
+  height: 150px;
+  width: 100%;
   display: flex;
   border: 2px solid #0d1733;
   background-color: #040f2ebc;
   padding: 20px;
   border-radius: 10px;
+  margin-bottom: 20px;
   color: rgb(20, 77, 58);
   text-align: center;
   text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
@@ -517,14 +619,15 @@ header h1 {
 
 .habilidades .habilidad1 h3 {
   color: rgb(20, 77, 58);
-  font-size: 100px;
+  font-size: 70px;
   margin-left: 100px;
   margin-right: 100px;
 }
 
 .habilidades .habilidad1 img {
-  width: 300px;
-  height: 150px;
+  width: 150px;
+  height: 100px;
+  margin-left: 100px;
 }
 
 .habilidades .habilidad2 {
@@ -533,6 +636,7 @@ header h1 {
   background-color: #040f2ebc;
   padding: 20px;
   border-radius: 10px;
+  margin-bottom: 20px;
   color: rgb(20, 77, 58);
   text-align: center;
   text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
@@ -540,14 +644,15 @@ header h1 {
 
 .habilidades .habilidad2 h3 {
   color: rgb(20, 77, 58);
-  font-size: 100px;
+  font-size: 70px;
   margin-left: 100px;
-  margin-right: 150px;
+  margin-right: 100px;
 }
 
 .habilidades .habilidad2 img {
-  width: 300px;
-  height: 150px;
+  width: 150px;
+  height: 100px;
+  margin-left: 140px;
 }
 
 .habilidades .habilidad3 {
@@ -556,23 +661,21 @@ header h1 {
   background-color: #040f2ebc;
   padding: 20px;
   border-radius: 10px;
+  margin-bottom: 20px;
   color: rgb(20, 77, 58);
   text-align: center;
   text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
 }
 
 .habilidades .habilidad3 h3 {
-  margin-right: 50px;
-  margin-left: 30px;
+  margin-right: 30px;
   color: rgb(20, 77, 58);
-  font-size: 95px;
+  font-size: 70px;
 }
 
 .habilidades .habilidad3 img {
-  margin-right: 150px;
-  margin-top: 50px;
-  width: 300px;
-  height: 150px;
+  width: 150px;
+  height: 100px;
 }
 
 .habilidades .habilidad4 {
