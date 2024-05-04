@@ -298,6 +298,7 @@ header h1 {
   }
 }
 
+/* Estilos Introduccion */
 
 .contenedorIntroduccion {
     position: fixed;
@@ -362,8 +363,70 @@ header h1 {
   align-items: center;
 }
 
+/* Estilos introduccion media query */
+
+@media only screen and (max-width: 600px) {
+
+  .contenedorIntroduccion {
+    top: 0;
+    left: 0;
+    width: 160px; 
+    height: 100%; 
+    background-color: rgba(71, 74, 243, 0.356);
+  }
+
+  .image {
+    border-radius: 50%;
+    width: 100px; 
+    height: 100px;
+  }
+
+  .contenedorIntroduccion h1 {
+    font-size: 20px;
+    color: rgb(134, 211, 185);
+    text-align: center;
+    text-decoration:aliceblue underline;
+    text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
+  }
+
+
+  .introduccion {
+    border: 2px solid #405ba5;
+    background-color: #344572bc;
+    border-radius: 10px;
+    height: 100%;
+  }
+
+  .introduccion h1 {
+    display: none;
+  }
+
+  .introduccion h2 {
+    text-align: left; 
+    font-size: 18px;
+
+  }
+
+  .introduccion h3 {
+    text-align: left;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .contenedorIntroduccion h1 {
+    display: none;
+  }
+
+  .introduccion h1 {
+    display: block;
+  }
+}
+
+/* Estilos de Juego Snake */
 #game-container {
-  margin-left: 400px;
+  margin: 0 auto;
+  width: 400px;
   position: relative;
 }
 
@@ -374,18 +437,48 @@ header h1 {
 }
 
 @media only screen and (max-width: 600px) {
+
+  #game-container {
+    margin-left: 160px;
+  }
+
+  #gameSnake {
+    height: 200px;
+    width: 200px;
+  }
+
   #mobile-controls {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    text-align: center;
+    display: inline-flexbox;
+    bottom: 10px;
+    width: 20px;
   }
   
   #mobile-controls button {
-    font-size: 24px;
-    padding: 10px 20px;
-    margin: 0 10px;
+    font-size: 20px;
+    display: flex;
+    /*padding: 5px 10px;
+    margin: 0 5px;*/
   }
+
+  #upButton {
+    margin-left: 90px;
+  }
+
+  #downButton {
+    margin-left: 90px;
+
+  }
+
+  #leftButton {
+    margin-left: 50px;
+    margin-right: 0px;
+  }
+
+  #rightButton {
+    right: 0px;
+    
+  }
+  
   
 }
 
