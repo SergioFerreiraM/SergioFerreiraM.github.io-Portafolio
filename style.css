@@ -234,7 +234,7 @@ header h1 {
   }
   .menu-btn {  
   position: fixed;
-  left: 90%;
+  left: 88%;
   margin-bottom: 20px;
   z-index: 1000;
   }
@@ -710,6 +710,7 @@ header h1 {
   padding: 20px;
   border-radius: 10px;
   margin-top: 100px;
+  margin-left: 250px;
   text-align: center;
 }
 
@@ -817,30 +818,84 @@ header h1 {
 }
 
 @media only screen and (max-width: 600px) {
+  .habilidades {
+    margin-left: 160px;
+  }
+  .habilidades h1{
+    font-size: 25px;
+  }
   .habilidades .habilidad1 {
     height: 100px;
-    width: 150px;
+    width: 200px;
     display: flex;
     text-align: center;
     justify-content: center;
   }
   .habilidades .habilidad1 h3 {
+    margin-left: 15px;
+    margin-right: 10px;
+    margin-top: 10px;
     font-size: 25px;
   }
   .habilidades .habilidad1 img {
     width: 100px;
     height: 50px;
   }
-  .habilidades .habilidad2 img {
-    width: 100px;
+  .habilidades .habilidad2 {
     height: 100px;
+    width: 200px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  .habilidades .habilidad2 h3 {
+    margin-left: 5px;
+    margin-right: 20px;
+    margin-top: 10px;
+    font-size: 25px;
+  }
+  .habilidades .habilidad2 img {
+    width: 150px;
+    height: 50px;
+  }
+  .habilidades .habilidad3 {
+    height: 100px;
+    width: 200px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  .habilidades .habilidad3 h3 {
+    margin-left: 0px;
+    margin-right: 10px;
+    font-size: 25px;
   }
   .habilidades .habilidad3 img {
-    width: 100px;
+    width: 80px;
+    height: 50px;
+  }
+  .habilidades .habilidad4 {
     height: 100px;
+    width: 200px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  .habilidades .habilidad4 h3 {
+    margin-left: 15px;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: 25px;
   }
   .habilidades .habilidad4 img {
     width: 100px;
-    height: 100px;
+    height: 50px;
   }
+}
+
+.footer {
+  text-align: center;
+  color: rgb(20, 77, 58);
+  font-size: 20px;
+  text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
 }
