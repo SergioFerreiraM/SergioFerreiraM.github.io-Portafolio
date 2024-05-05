@@ -228,10 +228,13 @@ header h1 {
 
 @media only screen and (max-width: 600px) {
 
+  header {
+    display: flex;
+    margin-left: 160px;
+  }
   .menu-btn {  
-
   position: fixed;
-  right: 90%;
+  left: 90%;
   margin-bottom: 20px;
   z-index: 1000;
   }
@@ -440,6 +443,8 @@ header h1 {
 
   #game-container {
     margin-left: 160px;
+    width: 200px;
+    text-align: center;
   }
 
   #gameSnake {
@@ -448,35 +453,28 @@ header h1 {
   }
 
   #mobile-controls {
-    display: inline-flexbox;
+    /*display: flex;
+    justify-content: center;
     bottom: 10px;
-    width: 20px;
+    width: 100%;*/
+    margin-top: 20px;
   }
   
   #mobile-controls button {
     font-size: 20px;
-    display: flex;
-    /*padding: 5px 10px;
-    margin: 0 5px;*/
+    padding: 5px 10px;
+    margin: 5px;
   }
 
-  #upButton {
-    margin-left: 90px;
+
+  #leftButton, #rightButton, #upButton {
+  display: inline-block;
   }
 
-  #downButton {
-    margin-left: 90px;
-
-  }
-
-  #leftButton {
-    margin-left: 50px;
-    margin-right: 0px;
-  }
-
-  #rightButton {
-    right: 0px;
-    
+  #upButton, #downButton {
+    display: inline-block;
+    margin: 0 5px;
+    margin-top: 20px;
   }
   
   
@@ -498,6 +496,7 @@ header h1 {
   padding: 20px;
   border-radius: 10px;
   margin-top: 100px;
+  margin-left: 250px;
   text-align: center;
 }
 
@@ -568,6 +567,14 @@ header h1 {
   text-shadow: 2px 2px 4px rgba(2, 11, 41, 0.87) ;
 }
 
+@media only screen and (max-width: 600px) {
+  .social {
+    margin-left: 160px;
+  }
+
+
+}
+
 /* Estilos de proyectos */
 
 .proyectos {
@@ -576,6 +583,7 @@ header h1 {
   padding: 20px;
   border-radius: 10px;
   margin-top: 100px;
+  margin-left: 250px;
   text-align: center;
 }
 .proyectos h1 {
@@ -678,6 +686,22 @@ header h1 {
 
 }
 
+@media only screen and (max-width: 600px) {
+  .proyectos {
+    margin-left: 160px;
+  }
+
+  .proyectos .enlaceSolar img {
+    height: 100px;
+    width: 150px;
+  }
+    
+  .proyectos .enlaceSSM img {
+    height: 100px;
+    width: 150px;
+  }
+}
+
 /* Estilos de habilidades */
 
 .habilidades {
@@ -712,7 +736,7 @@ header h1 {
 
 .habilidades .habilidad1 h3 {
   color: rgb(20, 77, 58);
-  font-size: 70px;
+  font-size: 60px;
   margin-left: 100px;
   margin-right: 100px;
 }
@@ -720,7 +744,6 @@ header h1 {
 .habilidades .habilidad1 img {
   width: 150px;
   height: 100px;
-  margin-left: 100px;
 }
 
 .habilidades .habilidad2 {
@@ -745,7 +768,6 @@ header h1 {
 .habilidades .habilidad2 img {
   width: 150px;
   height: 100px;
-  margin-left: 140px;
 }
 
 .habilidades .habilidad3 {
@@ -763,7 +785,7 @@ header h1 {
 .habilidades .habilidad3 h3 {
   margin-right: 30px;
   color: rgb(20, 77, 58);
-  font-size: 70px;
+  font-size: 60px;
 }
 
 .habilidades .habilidad3 img {
@@ -784,12 +806,41 @@ header h1 {
 
 .habilidades .habilidad4 h3 {
   color: rgb(20, 77, 58);
-  font-size: 100px;
+  font-size: 60px;
   margin-left: 100px;
   margin-right: 100px;
 }
 
 .habilidades .habilidad4 img {
-  width: 300px;
-  height: 150px;
+  width: 150px;
+  height: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+  .habilidades .habilidad1 {
+    height: 100px;
+    width: 150px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  .habilidades .habilidad1 h3 {
+    font-size: 25px;
+  }
+  .habilidades .habilidad1 img {
+    width: 100px;
+    height: 50px;
+  }
+  .habilidades .habilidad2 img {
+    width: 100px;
+    height: 100px;
+  }
+  .habilidades .habilidad3 img {
+    width: 100px;
+    height: 100px;
+  }
+  .habilidades .habilidad4 img {
+    width: 100px;
+    height: 100px;
+  }
 }
