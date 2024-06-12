@@ -19,6 +19,7 @@ body, h1, h2, h3, p, ul, li {
   height: 100%;
   object-fit: cover;
   filter: brightness(30%); 
+}
 
 body::before {
     content: "";
@@ -622,18 +623,20 @@ header h1 {
 .proyectos .vista-previa {
   display: none; 
   position: absolute;
-  top: -150px; 
-  left: 50%; 
-  transform: translateX(-50%); 
-  width: 200px; 
+  top: -50px; 
+  left: 5%; 
+  transform: translateX(-10%); 
+  width: 30px; 
+  height: 30px;
   border: 1px solid #ccc;
   background-color: #fff;
   padding: 10px;
+  size: 50px;
 }
 
-/*.proyectos .enlace:hover + .vista-previa {
-  display: block; /* Mostrar la vista previa al pasar el cursor por encima del enlace 
-}*/
+.proyectos .enlace:hover .vista-previa {
+  display: block;
+}
 
 .proyectos .contenido {
   border: 1px solid #ccc;

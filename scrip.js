@@ -40,13 +40,14 @@ function cambiarFondo2() {
 }
 menuBtn.addEventListener('mouseout', cambiarFondo2);
 
-function mostrarVistaPrevia(idContenido) {
+function mostrarVistaPrevia(contenido) {
   let vistaPrevia = document.getElementById('vista-previa');
-  let contenidoEnlace = document.getElementById(idContenido);
+  let contenidoEnlace = document.getElementById(contenidoEnlace1);
 
   vistaPrevia.style.display = 'block';
   vistaPrevia.innerHTML = contenidoEnlace.innerHTML;
 }
+vistaPrevia.addEventListener('mouseover', mostrarVistaPrevia);
 
 //Juego Snake
 const canvas = document.getElementById('gameSnake');
@@ -139,7 +140,7 @@ let game = setInterval(main, 100);*/
 document.addEventListener('keydown', e => {
     const key = e.key;
     if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(key)) {
-        e.preventDefault(); // Cancela el comportamiento predeterminado de las flechas
+        e.preventDefault(); 
     }
     if (key === 'ArrowUp' && dy === 0) {
         dx = 0;
@@ -172,13 +173,4 @@ document.getElementById('rightButton').addEventListener('touchstart', function()
     dx = box;
     dy = 0;
 });
-/*import React from "https://esm.sh/react@18.2.0";
-import ReactDOM from "https://esm.sh/react-dom@18.2.0/client";
 
-const appDomElement = document.getElementById("app");
-
-const root = ReactDOM.createRoot(appDomElement);
-
-const menuBtn = React.createElement('menu-btn', null, null);
-
-root.render(menuBtn);*/
